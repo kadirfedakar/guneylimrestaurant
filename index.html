@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Restoran Menüsü</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { color: darkred; }
+    .menu-item { margin: 10px 0; cursor: pointer; font-weight: bold; color: #b22222; }
+    .ingredients { display: none; margin-left: 20px; color: #555; }
+  </style>
+</head>
+<body>
+
+  <h1>Menü</h1>
+
+  <div class="menu-item" onclick="toggleIngredients('adana')">
+    Adana Kebap
+  </div>
+  <div id="adana" class="ingredients">
+    Malzemeler: Kıyma, acı biber, baharat, kuyruk yağı
+  </div>
+
+  <div class="menu-item" onclick="toggleIngredients('lahmacun')">
+    Lahmacun
+  </div>
+  <div id="lahmacun" class="ingredients">
+    Malzemeler: Kıyma, domates, soğan, maydanoz, baharat
+  </div>
+
+  <script>
+    function toggleIngredients(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === "block") ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
